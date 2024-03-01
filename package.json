@@ -6,20 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+    "db:push": "npx prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "@radix-ui/themes": "^2.0.3",
     "@types/node": "20.11.20",
     "@types/react": "18.2.58",
     "@types/react-dom": "18.2.19",
     "autoprefixer": "10.4.17",
+    "axios": "^1.5.0",
+    "classnames": "^2.3.2",
+    "easymde": "^2.18.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.0",
     "next": "14.1.0",
     "postcss": "8.4.35",
+    "prisma": "^5.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
+    "react-icons": "^4.11.0",
+    "react-simplemde-editor": "^5.2.0",
     "tailwindcss": "3.4.1",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zod": "^3.22.2"
   }
 }
